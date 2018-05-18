@@ -19,6 +19,7 @@ class BaseView: UIView {
     init() {
         super.init(frame: .zero)
 
+        translatesAutoresizingMaskIntoConstraints = false
         self.backgroundColor = .background
     }
 }

@@ -15,6 +15,11 @@ class WalletViewController: BaseViewController {
 
     private weak var coordinatorDelegate: WalletViewControllerCoordinatorDelegate?
 
+    private let cardAndActionsView: CardAndActionsView = {
+        let cardAndActionsView = CardAndActionsView()
+        return cardAndActionsView
+    }()
+
     init(coordinatorDelegate: WalletViewControllerCoordinatorDelegate) {
         self.coordinatorDelegate = coordinatorDelegate
 
@@ -24,6 +29,12 @@ class WalletViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .red
+        view.addSubview(cardAndActionsView)
+
+        NSLayoutConstraint.activate([
+            cardAndActionsView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: .topPadding),
+            cardAndActionsView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: .creditCardWidthRelativeToSuperview),
+            cardAndActionsView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor)
+        ])
     }
 }

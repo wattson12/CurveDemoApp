@@ -17,6 +17,8 @@
 		228B757F20AF187600B0D63D /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B757E20AF187600B0D63D /* BaseView.swift */; };
 		228B758220AF18AD00B0D63D /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B758120AF18AD00B0D63D /* WalletViewController.swift */; };
 		228B758420AF197A00B0D63D /* WalletViewControllerCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B758320AF197A00B0D63D /* WalletViewControllerCoordinatorDelegate.swift */; };
+		228B758620AF1AD300B0D63D /* CardAndActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B758520AF1AD300B0D63D /* CardAndActionsView.swift */; };
+		228B758820AF1C6900B0D63D /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B758720AF1C6900B0D63D /* Layout.swift */; };
 		5DB569A30228C739A01CF6AC /* Pods_CurveProjectDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB986A9EF6E30C6916E896C /* Pods_CurveProjectDemoTests.framework */; };
 		D5C4D632988EB10630046E03 /* Pods_CurveProjectDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26649FFF4D0A2217FE807195 /* Pods_CurveProjectDemo.framework */; };
 /* End PBXBuildFile section */
@@ -46,6 +48,8 @@
 		228B757E20AF187600B0D63D /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		228B758120AF18AD00B0D63D /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
 		228B758320AF197A00B0D63D /* WalletViewControllerCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewControllerCoordinatorDelegate.swift; sourceTree = "<group>"; };
+		228B758520AF1AD300B0D63D /* CardAndActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAndActionsView.swift; sourceTree = "<group>"; };
+		228B758720AF1C6900B0D63D /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		26649FFF4D0A2217FE807195 /* Pods_CurveProjectDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CurveProjectDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AB986A9EF6E30C6916E896C /* Pods_CurveProjectDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CurveProjectDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FF3AC70103E17776D7ECC9E /* Pods-CurveProjectDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurveProjectDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CurveProjectDemo/Pods-CurveProjectDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -156,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				228B758120AF18AD00B0D63D /* WalletViewController.swift */,
+				228B758520AF1AD300B0D63D /* CardAndActionsView.swift */,
 			);
 			path = "Wallet ";
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				228B757920AF17FB00B0D63D /* UIColor+Styling.swift */,
+				228B758720AF1C6900B0D63D /* Layout.swift */,
 			);
 			path = "UI + Styling";
 			sourceTree = "<group>";
@@ -385,6 +391,8 @@
 				228B757C20AF185100B0D63D /* BaseViewController.swift in Sources */,
 				228B757F20AF187600B0D63D /* BaseView.swift in Sources */,
 				228B757A20AF17FB00B0D63D /* UIColor+Styling.swift in Sources */,
+				228B758620AF1AD300B0D63D /* CardAndActionsView.swift in Sources */,
+				228B758820AF1C6900B0D63D /* Layout.swift in Sources */,
 				222F6DF020AF12D90093EFDE /* AppDelegate.swift in Sources */,
 				228B758220AF18AD00B0D63D /* WalletViewController.swift in Sources */,
 				228B758420AF197A00B0D63D /* WalletViewControllerCoordinatorDelegate.swift in Sources */,
