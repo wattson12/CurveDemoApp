@@ -130,6 +130,7 @@
 			buildConfigurationList = 222F6E0920AF12DB0093EFDE /* Build configuration list for PBXNativeTarget "CurveProjectDemo" */;
 			buildPhases = (
 				4E2CB545EFDDBA57B48429BC /* [CP] Check Pods Manifest.lock */,
+				22DDFD1420AF15BB00E0B412 /* Run SwiftLint */,
 				222F6DE820AF12D90093EFDE /* Sources */,
 				222F6DE920AF12D90093EFDE /* Frameworks */,
 				222F6DEA20AF12D90093EFDE /* Resources */,
@@ -221,6 +222,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		22DDFD1420AF15BB00E0B412 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
+		};
 		4E2CB545EFDDBA57B48429BC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
