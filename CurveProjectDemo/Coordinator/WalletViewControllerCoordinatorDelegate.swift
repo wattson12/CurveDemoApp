@@ -9,9 +9,22 @@
 import Foundation
 
 protocol WalletViewControllerCoordinatorDelegate: class {
-
+    func buttonATapped(from walletViewController: WalletViewController)
+    func buttonBTapped(from walletViewController: WalletViewController)
+    func buttonCTapped(from walletViewController: WalletViewController)
 }
 
 extension AppCoordinator: WalletViewControllerCoordinatorDelegate {
 
+    func buttonATapped(from walletViewController: WalletViewController) {
+        print(#function)
+    }
+
+    func buttonBTapped(from walletViewController: WalletViewController) {
+        print(#function)
+    }
+
+    func buttonCTapped(from walletViewController: WalletViewController) {
+        print(#function)
+    }
 }

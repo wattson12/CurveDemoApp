@@ -22,6 +22,7 @@ class CardAndActionsView: BaseView {
         let buttonA = UIButton(type: .custom)
         buttonA.translatesAutoresizingMaskIntoConstraints = false
         buttonA.backgroundColor = .actionButtonBackground
+        buttonA.layer.cornerRadius = 22
         return buttonA
     }()
 
@@ -29,6 +30,7 @@ class CardAndActionsView: BaseView {
         let buttonB = UIButton(type: .custom)
         buttonB.translatesAutoresizingMaskIntoConstraints = false
         buttonB.backgroundColor = .actionButtonBackground
+        buttonB.layer.cornerRadius = 22
         return buttonB
     }()
 
@@ -36,6 +38,7 @@ class CardAndActionsView: BaseView {
         let buttonC = UIButton(type: .custom)
         buttonC.translatesAutoresizingMaskIntoConstraints = false
         buttonC.backgroundColor = .actionButtonBackground
+        buttonC.layer.cornerRadius = 22
         return buttonC
     }()
 

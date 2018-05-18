@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class WalletViewController: BaseViewController {
 
@@ -36,5 +38,36 @@ class WalletViewController: BaseViewController {
             cardAndActionsView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: .creditCardWidthRelativeToSuperview),
             cardAndActionsView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor)
         ])
+
+        setupViewBindings()
+    }
+
+    private func setupViewBindings() {
+        cardAndActionsView
+            .buttonA
+            .rx.tap
+            .subscribe(onNext: { [weak self] in
+                guard let `self` = self else { return }
+                self.coordinatorDelegate?.buttonATapped(from: self)
+            })
+            .disposed(by: disposeBag)
+
+        cardAndActionsView
+            .buttonB
+            .rx.tap
+            .subscribe(onNext: { [weak self] in
+                guard let `self` = self else { return }
+                self.coordinatorDelegate?.buttonBTapped(from: self)
+            })
+            .disposed(by: disposeBag)
+
+        cardAndActionsView
+            .buttonC
+            .rx.tap
+            .subscribe(onNext: { [weak self] in
+                guard let `self` = self else { return }
+                self.coordinatorDelegate?.buttonCTapped(from: self)
+            })
+            .disposed(by: disposeBag)
     }
 }
