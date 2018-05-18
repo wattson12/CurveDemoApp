@@ -10,6 +10,17 @@ import UIKit
 
 class WalletViewController: BaseViewController {
 
+    @available(iOS, unavailable, message: "init() is unavailable, use init(coordinatorDelegate:) instead")
+    override init() { fatalError() }
+
+    private weak var coordinatorDelegate: WalletViewControllerCoordinatorDelegate?
+
+    init(coordinatorDelegate: WalletViewControllerCoordinatorDelegate) {
+        self.coordinatorDelegate = coordinatorDelegate
+
+        super.init()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
