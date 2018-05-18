@@ -1,0 +1,5 @@
+excluded: # ignoring external code and tests
+  - Pods
+  - CurveProjectDemoTests
+
+line_length: 200
