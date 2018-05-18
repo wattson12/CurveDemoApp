@@ -11,6 +11,7 @@
 		222F6DF720AF12DB0093EFDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 222F6DF620AF12DB0093EFDE /* Assets.xcassets */; };
 		222F6DFA20AF12DB0093EFDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 222F6DF820AF12DB0093EFDE /* LaunchScreen.storyboard */; };
 		222F6E0520AF12DB0093EFDE /* CurveProjectDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222F6E0420AF12DB0093EFDE /* CurveProjectDemoTests.swift */; };
+		228B757820AF173400B0D63D /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B757720AF173400B0D63D /* AppCoordinator.swift */; };
 		5DB569A30228C739A01CF6AC /* Pods_CurveProjectDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB986A9EF6E30C6916E896C /* Pods_CurveProjectDemoTests.framework */; };
 		D5C4D632988EB10630046E03 /* Pods_CurveProjectDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26649FFF4D0A2217FE807195 /* Pods_CurveProjectDemo.framework */; };
 /* End PBXBuildFile section */
@@ -34,6 +35,7 @@
 		222F6E0020AF12DB0093EFDE /* CurveProjectDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurveProjectDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		222F6E0420AF12DB0093EFDE /* CurveProjectDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurveProjectDemoTests.swift; sourceTree = "<group>"; };
 		222F6E0620AF12DB0093EFDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		228B757720AF173400B0D63D /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		26649FFF4D0A2217FE807195 /* Pods_CurveProjectDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CurveProjectDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AB986A9EF6E30C6916E896C /* Pods_CurveProjectDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CurveProjectDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FF3AC70103E17776D7ECC9E /* Pods-CurveProjectDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurveProjectDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CurveProjectDemo/Pods-CurveProjectDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -85,6 +87,12 @@
 		222F6DEE20AF12D90093EFDE /* CurveProjectDemo */ = {
 			isa = PBXGroup;
 			children = (
+				228B757320AF16B900B0D63D /* Model */,
+				228B757220AF16B300B0D63D /* Networking */,
+				22DDFD1820AF168B00E0B412 /* UI + Styling */,
+				22DDFD1620AF167200E0B412 /* Utility */,
+				22DDFD1520AF166B00E0B412 /* Screens */,
+				228B757420AF16CD00B0D63D /* Coordinator */,
 				222F6DEF20AF12D90093EFDE /* AppDelegate.swift */,
 				222F6DF620AF12DB0093EFDE /* Assets.xcassets */,
 				222F6DF820AF12DB0093EFDE /* LaunchScreen.storyboard */,
@@ -100,6 +108,49 @@
 				222F6E0620AF12DB0093EFDE /* Info.plist */,
 			);
 			path = CurveProjectDemoTests;
+			sourceTree = "<group>";
+		};
+		228B757220AF16B300B0D63D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		228B757320AF16B900B0D63D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		228B757420AF16CD00B0D63D /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				228B757720AF173400B0D63D /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		22DDFD1520AF166B00E0B412 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		22DDFD1620AF167200E0B412 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		22DDFD1820AF168B00E0B412 /* UI + Styling */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "UI + Styling";
 			sourceTree = "<group>";
 		};
 		2A2106C5622D12C2B92053A0 /* Pods */ = {
@@ -299,6 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				228B757820AF173400B0D63D /* AppCoordinator.swift in Sources */,
 				222F6DF020AF12D90093EFDE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
