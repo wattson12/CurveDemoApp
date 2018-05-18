@@ -18,8 +18,8 @@ final class AppCoordinator {
     }
 
     func start() {
-        let cardsAndTransactionViewController = UIViewController()
-        let rootNavigationController = UINavigationController(rootViewController: cardsAndTransactionViewController)
+        let walletViewController = WalletViewController()
+        let rootNavigationController = UINavigationController(rootViewController: walletViewController)
 
         window.rootViewController = rootNavigationController
 
