@@ -10,6 +10,24 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+extension Category {
+
+    var displayName: String { //TODO: Localise
+        switch self {
+        case .general:
+            return "General"
+        case .groceries:
+            return "Groceries"
+        case .transport:
+            return "Transport"
+        }
+    }
+
+    var icon: UIImage? {
+        return nil
+    }
+}
+
 extension Observable where Element: Collection, Element.Element == Transaction {
 
     func mapToTransactionViewState() -> Observable<[TransactionTableViewCell.ViewState]> {
@@ -17,8 +35,8 @@ extension Observable where Element: Collection, Element.Element == Transaction {
             return elements.map {
                 TransactionTableViewCell.ViewState(
                     merchantName: $0.merchantName,
-                    categoryImage: nil,
-                    categoryName: $0.category.rawValue,
+                    categoryImage: $0.category.icon,
+                    categoryName: $0.category.displayName,
                     price: NSAttributedString(string: "\($0.currency)\($0.value)")
                 )
             }
