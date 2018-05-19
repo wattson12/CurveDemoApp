@@ -11,6 +11,8 @@
 		222F6DF720AF12DB0093EFDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 222F6DF620AF12DB0093EFDE /* Assets.xcassets */; };
 		222F6DFA20AF12DB0093EFDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 222F6DF820AF12DB0093EFDE /* LaunchScreen.storyboard */; };
 		222F6E0520AF12DB0093EFDE /* CurveProjectDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222F6E0420AF12DB0093EFDE /* CurveProjectDemoTests.swift */; };
+		2260837A20B0603A00483EA0 /* CellReuse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260837920B0603A00483EA0 /* CellReuse.swift */; };
+		2260837C20B060DB00483EA0 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260837B20B060DB00483EA0 /* TransactionTableViewCell.swift */; };
 		228B757820AF173400B0D63D /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B757720AF173400B0D63D /* AppCoordinator.swift */; };
 		228B757A20AF17FB00B0D63D /* UIColor+Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B757920AF17FB00B0D63D /* UIColor+Styling.swift */; };
 		228B757C20AF185100B0D63D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B757B20AF185100B0D63D /* BaseViewController.swift */; };
@@ -42,6 +44,8 @@
 		222F6E0020AF12DB0093EFDE /* CurveProjectDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurveProjectDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		222F6E0420AF12DB0093EFDE /* CurveProjectDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurveProjectDemoTests.swift; sourceTree = "<group>"; };
 		222F6E0620AF12DB0093EFDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2260837920B0603A00483EA0 /* CellReuse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellReuse.swift; sourceTree = "<group>"; };
+		2260837B20B060DB00483EA0 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		228B757720AF173400B0D63D /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		228B757920AF17FB00B0D63D /* UIColor+Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Styling.swift"; sourceTree = "<group>"; };
 		228B757B20AF185100B0D63D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +165,7 @@
 			children = (
 				228B758120AF18AD00B0D63D /* WalletViewController.swift */,
 				228B758520AF1AD300B0D63D /* CardAndActionsView.swift */,
+				2260837B20B060DB00483EA0 /* TransactionTableViewCell.swift */,
 			);
 			path = "Wallet ";
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 		22DDFD1620AF167200E0B412 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				2260837920B0603A00483EA0 /* CellReuse.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -387,6 +393,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2260837A20B0603A00483EA0 /* CellReuse.swift in Sources */,
+				2260837C20B060DB00483EA0 /* TransactionTableViewCell.swift in Sources */,
 				228B757820AF173400B0D63D /* AppCoordinator.swift in Sources */,
 				228B757C20AF185100B0D63D /* BaseViewController.swift in Sources */,
 				228B757F20AF187600B0D63D /* BaseView.swift in Sources */,

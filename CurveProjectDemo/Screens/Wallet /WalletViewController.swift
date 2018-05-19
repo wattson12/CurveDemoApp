@@ -25,6 +25,7 @@ class WalletViewController: BaseViewController {
     private let transactionsTableView: UITableView = {
         let transactionsTableView = UITableView(frame: .zero, style: .plain)
         transactionsTableView.translatesAutoresizingMaskIntoConstraints = false
+        transactionsTableView.registerCell(TransactionTableViewCell.self)
         return transactionsTableView
     }()
 
