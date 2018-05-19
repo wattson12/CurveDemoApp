@@ -22,6 +22,12 @@ class WalletViewController: BaseViewController {
         return cardAndActionsView
     }()
 
+    private let transactionsTableView: UITableView = {
+        let transactionsTableView = UITableView(frame: .zero, style: .plain)
+        transactionsTableView.translatesAutoresizingMaskIntoConstraints = false
+        return transactionsTableView
+    }()
+
     init(coordinatorDelegate: WalletViewControllerCoordinatorDelegate) {
         self.coordinatorDelegate = coordinatorDelegate
 
@@ -32,11 +38,21 @@ class WalletViewController: BaseViewController {
         super.viewDidLoad()
 
         view.addSubview(cardAndActionsView)
+        view.addSubview(transactionsTableView)
 
+        //cards pinned to top, height based on card width
         NSLayoutConstraint.activate([
-            cardAndActionsView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: .topPadding),
+            cardAndActionsView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: .verticalMargin),
             cardAndActionsView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: .creditCardWidthRelativeToSuperview),
             cardAndActionsView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor)
+        ])
+
+        //table view taking up the remaining bottom space
+        NSLayoutConstraint.activate([
+            transactionsTableView.topAnchor.constraint(equalTo: cardAndActionsView.bottomAnchor, constant: .verticalMargin),
+            transactionsTableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            transactionsTableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            transactionsTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
 
         setupViewBindings()

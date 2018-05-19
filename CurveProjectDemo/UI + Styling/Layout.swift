@@ -10,19 +10,14 @@ import UIKit
 
 extension CGFloat {
 
-    static var cornerRadius: CGFloat {
-        return 10
-    }
+    static let cornerRadius: CGFloat = 10
 
-    static var topPadding: CGFloat {
-        return 30
-    }
+    static let verticalMargin: CGFloat = 20
+    static let horizontalMargin: CGFloat = 20
 
-    static var creditCardWidthRelativeToSuperview: CGFloat {
-        return 0.8
-    }
+    static let creditCardWidthRelativeToSuperview: CGFloat = 0.8
 
-    static var creditCardAspectRatio: CGFloat {
-        return 1.586
-    }
+    static let creditCardAspectRatio: CGFloat = 1.586
+
+    static let minimumTappableDimension: CGFloat = 44
 }
