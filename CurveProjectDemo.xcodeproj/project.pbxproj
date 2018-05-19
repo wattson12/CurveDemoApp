@@ -14,6 +14,7 @@
 		2260837A20B0603A00483EA0 /* CellReuse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260837920B0603A00483EA0 /* CellReuse.swift */; };
 		2260837C20B060DB00483EA0 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260837B20B060DB00483EA0 /* TransactionTableViewCell.swift */; };
 		2260837E20B0678F00483EA0 /* CardAndTransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260837D20B0678F00483EA0 /* CardAndTransactionsViewModel.swift */; };
+		2260838020B06A9900483EA0 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260837F20B06A9900483EA0 /* Transaction.swift */; };
 		228B757820AF173400B0D63D /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B757720AF173400B0D63D /* AppCoordinator.swift */; };
 		228B757A20AF17FB00B0D63D /* UIColor+Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B757920AF17FB00B0D63D /* UIColor+Styling.swift */; };
 		228B757C20AF185100B0D63D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B757B20AF185100B0D63D /* BaseViewController.swift */; };
@@ -48,6 +49,7 @@
 		2260837920B0603A00483EA0 /* CellReuse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellReuse.swift; sourceTree = "<group>"; };
 		2260837B20B060DB00483EA0 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		2260837D20B0678F00483EA0 /* CardAndTransactionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAndTransactionsViewModel.swift; sourceTree = "<group>"; };
+		2260837F20B06A9900483EA0 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		228B757720AF173400B0D63D /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		228B757920AF17FB00B0D63D /* UIColor+Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Styling.swift"; sourceTree = "<group>"; };
 		228B757B20AF185100B0D63D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 		228B757320AF16B900B0D63D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2260837F20B06A9900483EA0 /* Transaction.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 				228B757820AF173400B0D63D /* AppCoordinator.swift in Sources */,
 				228B757C20AF185100B0D63D /* BaseViewController.swift in Sources */,
 				228B757F20AF187600B0D63D /* BaseView.swift in Sources */,
+				2260838020B06A9900483EA0 /* Transaction.swift in Sources */,
 				228B757A20AF17FB00B0D63D /* UIColor+Styling.swift in Sources */,
 				228B758620AF1AD300B0D63D /* CardAndActionsView.swift in Sources */,
 				2260837E20B0678F00483EA0 /* CardAndTransactionsViewModel.swift in Sources */,
