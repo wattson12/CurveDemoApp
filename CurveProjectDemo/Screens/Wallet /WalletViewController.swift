@@ -10,6 +10,17 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+extension Observable where Element: Collection, Element.Element == String {
+
+    func mapToTransactionViewState() -> Observable<[TransactionTableViewCell.ViewState]> {
+        return self.map { elements in
+            return elements.map {
+                TransactionTableViewCell.ViewState(merchantName: $0, categoryImage: nil, categoryName: "Groceries", price: NSAttributedString(string: "£9.99"))
+            }
+        }
+    }
+}
+
 class WalletViewController: BaseViewController {
 
     @available(iOS, unavailable, message: "init() is unavailable, use init(coordinatorDelegate:) instead")
@@ -31,7 +42,10 @@ class WalletViewController: BaseViewController {
         return transactionsTableView
     }()
 
-    init(coordinatorDelegate: WalletViewControllerCoordinatorDelegate) {
+    private let viewModel: CardAndTransactionsViewModel
+
+    init(viewModel: CardAndTransactionsViewModel, coordinatorDelegate: WalletViewControllerCoordinatorDelegate) {
+        self.viewModel = viewModel
         self.coordinatorDelegate = coordinatorDelegate
 
         super.init()
@@ -59,9 +73,6 @@ class WalletViewController: BaseViewController {
         ])
 
         setupViewBindings()
-
-        //TODO: remove this
-        transactionsTableView.dataSource = self
     }
 
     private func setupViewBindings() {
@@ -91,23 +102,14 @@ class WalletViewController: BaseViewController {
                 self.coordinatorDelegate?.buttonCTapped(from: self)
             })
             .disposed(by: disposeBag)
-    }
-}
 
-//TODO: move this to a reactive style based on view model
-
-extension WalletViewController: UITableViewDataSource {
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: TransactionTableViewCell.reuseIdentifier, for: indexPath) as? TransactionTableViewCell else { fatalError() }
-
-        let viewState = TransactionTableViewCell.ViewState(merchantName: "Tesco Tesco Tesco Tesco Tesco Tesco Tesco Tesco Tesco Tesco Tesco Tesco Tesco Tesco Tesco Tesco Tesco Tesco Tesco Tesco Tesco", categoryImage: nil, categoryName: "Groceries", price: NSAttributedString(string: "£9.99"))
-        cell.setViewState(viewState)
-
-        return cell
+        viewModel
+            .transactions
+            .asObservable()
+            .mapToTransactionViewState()
+            .bind(to: transactionsTableView.rx.items(cellIdentifier: TransactionTableViewCell.reuseIdentifier)) { (_, viewState: TransactionTableViewCell.ViewState, cell: TransactionTableViewCell) in
+                cell.setViewState(viewState)
+            }
+            .disposed(by: disposeBag)
     }
 }
