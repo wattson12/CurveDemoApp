@@ -18,6 +18,8 @@
 		2260838420B06C3800483EA0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2260838620B06C3800483EA0 /* Localizable.strings */; };
 		2260838920B06D3300483EA0 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260838820B06D3300483EA0 /* L10n.swift */; };
 		2260838C20B06F2B00483EA0 /* assets-images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260838B20B06F2A00483EA0 /* assets-images.swift */; };
+		2260838E20B06F8900483EA0 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260838D20B06F8900483EA0 /* DataProvider.swift */; };
+		2260839020B06FB700483EA0 /* Observable+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260838F20B06FB700483EA0 /* Observable+Mapping.swift */; };
 		228B757820AF173400B0D63D /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B757720AF173400B0D63D /* AppCoordinator.swift */; };
 		228B757A20AF17FB00B0D63D /* UIColor+Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B757920AF17FB00B0D63D /* UIColor+Styling.swift */; };
 		228B757C20AF185100B0D63D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B757B20AF185100B0D63D /* BaseViewController.swift */; };
@@ -56,6 +58,8 @@
 		2260838520B06C3800483EA0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2260838820B06D3300483EA0 /* L10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
 		2260838B20B06F2A00483EA0 /* assets-images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "assets-images.swift"; sourceTree = "<group>"; };
+		2260838D20B06F8900483EA0 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		2260838F20B06FB700483EA0 /* Observable+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Mapping.swift"; sourceTree = "<group>"; };
 		228B757720AF173400B0D63D /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		228B757920AF17FB00B0D63D /* UIColor+Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Styling.swift"; sourceTree = "<group>"; };
 		228B757B20AF185100B0D63D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +164,8 @@
 		228B757220AF16B300B0D63D /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				2260838D20B06F8900483EA0 /* DataProvider.swift */,
+				2260838F20B06FB700483EA0 /* Observable+Mapping.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -442,6 +448,7 @@
 			files = (
 				2260838C20B06F2B00483EA0 /* assets-images.swift in Sources */,
 				2260837A20B0603A00483EA0 /* CellReuse.swift in Sources */,
+				2260838E20B06F8900483EA0 /* DataProvider.swift in Sources */,
 				2260837C20B060DB00483EA0 /* TransactionTableViewCell.swift in Sources */,
 				228B757820AF173400B0D63D /* AppCoordinator.swift in Sources */,
 				228B757C20AF185100B0D63D /* BaseViewController.swift in Sources */,
@@ -455,6 +462,7 @@
 				222F6DF020AF12D90093EFDE /* AppDelegate.swift in Sources */,
 				228B758220AF18AD00B0D63D /* WalletViewController.swift in Sources */,
 				228B758420AF197A00B0D63D /* WalletViewControllerCoordinatorDelegate.swift in Sources */,
+				2260839020B06FB700483EA0 /* Observable+Mapping.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
