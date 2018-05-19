@@ -162,7 +162,7 @@
 			path = "Base Classes";
 			sourceTree = "<group>";
 		};
-		228B758020AF188C00B0D63D /* Wallet  */ = {
+		228B758020AF188C00B0D63D /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
 				228B758120AF18AD00B0D63D /* WalletViewController.swift */,
@@ -170,14 +170,14 @@
 				2260837B20B060DB00483EA0 /* TransactionTableViewCell.swift */,
 				2260837D20B0678F00483EA0 /* CardAndTransactionsViewModel.swift */,
 			);
-			path = "Wallet ";
+			path = Wallet;
 			sourceTree = "<group>";
 		};
 		22DDFD1520AF166B00E0B412 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
 				228B757D20AF186600B0D63D /* Base Classes */,
-				228B758020AF188C00B0D63D /* Wallet  */,
+				228B758020AF188C00B0D63D /* Wallet */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
