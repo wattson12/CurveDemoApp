@@ -10,11 +10,8 @@ import UIKit
 
 extension UIColor {
 
-    static var background: UIColor {
-        return .white
-    }
+    static let background: UIColor = .white
+    static let loadingBackground: UIColor = .lightGray
 
-    static var actionButtonBackground: UIColor {
-        return .lightGray
-    }
+    static let actionButtonBackground: UIColor = .lightGray
 }
