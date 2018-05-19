@@ -16,7 +16,7 @@ final class CardAndTransactionsViewModel {
 
     let transactions: BehaviorRelay<[String]>
 
-    init(transactions: [String]) {
+    init(transactions: [String] = []) {
         self.transactions = BehaviorRelay(value: transactions)
     }
 

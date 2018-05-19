@@ -18,7 +18,7 @@ final class AppCoordinator {
     }
 
     func start() {
-        let walletViewController = WalletViewController(viewModel: CardAndTransactionsViewModel(transactions: ["test", "sdfsdf"]), coordinatorDelegate: self)
+        let walletViewController = WalletViewController(coordinatorDelegate: self)
         let rootNavigationController = UINavigationController(rootViewController: walletViewController)
 
         window.rootViewController = rootNavigationController

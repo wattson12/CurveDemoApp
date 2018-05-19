@@ -44,7 +44,7 @@ class WalletViewController: BaseViewController {
 
     private let viewModel: CardAndTransactionsViewModel
 
-    init(viewModel: CardAndTransactionsViewModel, coordinatorDelegate: WalletViewControllerCoordinatorDelegate) {
+    init(viewModel: CardAndTransactionsViewModel = CardAndTransactionsViewModel(), coordinatorDelegate: WalletViewControllerCoordinatorDelegate) {
         self.viewModel = viewModel
         self.coordinatorDelegate = coordinatorDelegate
 
