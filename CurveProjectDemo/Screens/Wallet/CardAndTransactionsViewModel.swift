@@ -27,6 +27,7 @@ final class CardAndTransactionsViewModel {
         dataProvider
             .fetchResponse(fromURLRequest: .fetchTransactions)
             .convert(to: [Transaction].self)
+            .observeOn(MainScheduler.instance)
             .bind(to: transactions)
             .disposed(by: disposeBag)
     }

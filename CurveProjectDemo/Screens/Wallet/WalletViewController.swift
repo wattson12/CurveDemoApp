@@ -140,4 +140,10 @@ class WalletViewController: BaseViewController {
             }
             .disposed(by: disposeBag)
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        viewModel.fetchTransactions()
+    }
 }

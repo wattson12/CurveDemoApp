@@ -11,7 +11,7 @@ import Foundation
 extension URLRequest {
 
     static var fetchTransactions: URLRequest {
-        guard let url = URL(string: "http://localhost:8080/transactions") else { fatalError() }
+        guard let url = URL(string: "https://api.jsonbin.io/b/5b003ce1c83f6d4cc7349919") else { fatalError() }
         return URLRequest(url: url)
     }
 }
