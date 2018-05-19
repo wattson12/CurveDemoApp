@@ -12,14 +12,14 @@ import RxCocoa
 
 extension Category {
 
-    var displayName: String { //TODO: Localise
+    var displayName: String {
         switch self {
         case .general:
-            return "General"
+            return L10n.Category.DisplayName.general
         case .groceries:
-            return "Groceries"
+            return L10n.Category.DisplayName.groceries
         case .transport:
-            return "Transport"
+            return L10n.Category.DisplayName.transport
         }
     }
 

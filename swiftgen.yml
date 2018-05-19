@@ -1,0 +1,4 @@
+strings:
+  paths: CurveProjectDemo/Localisation/en.lproj/Localizable.strings
+  templateName: structured-swift4
+  output: CurveProjectDemo/Localisation/L10n.swift
