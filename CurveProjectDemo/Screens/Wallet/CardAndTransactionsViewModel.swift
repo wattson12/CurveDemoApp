@@ -14,9 +14,9 @@ final class CardAndTransactionsViewModel {
 
     let disposeBag = DisposeBag()
 
-    let transactions: BehaviorRelay<[String]>
+    let transactions: BehaviorRelay<[Transaction]>
 
-    init(transactions: [String] = []) {
+    init(transactions: [Transaction] = []) {
         self.transactions = BehaviorRelay(value: transactions)
     }
 

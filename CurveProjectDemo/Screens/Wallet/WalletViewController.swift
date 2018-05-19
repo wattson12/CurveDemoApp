@@ -10,12 +10,17 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-extension Observable where Element: Collection, Element.Element == String {
+extension Observable where Element: Collection, Element.Element == Transaction {
 
     func mapToTransactionViewState() -> Observable<[TransactionTableViewCell.ViewState]> {
         return self.map { elements in
             return elements.map {
-                TransactionTableViewCell.ViewState(merchantName: $0, categoryImage: nil, categoryName: "Groceries", price: NSAttributedString(string: "£9.99"))
+                TransactionTableViewCell.ViewState(
+                    merchantName: $0.merchantName,
+                    categoryImage: nil,
+                    categoryName: $0.category.rawValue,
+                    price: NSAttributedString(string: "\($0.currency)\($0.value)")
+                )
             }
         }
     }
