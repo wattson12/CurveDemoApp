@@ -15,6 +15,9 @@ extension CGFloat {
     static let verticalMargin: CGFloat = 20
     static let horizontalMargin: CGFloat = 20
 
+    static let verticalCellMargin: CGFloat = 10
+    static let horizontalCellMargin: CGFloat = 10
+
     static let creditCardWidthRelativeToSuperview: CGFloat = 0.8
 
     static let creditCardAspectRatio: CGFloat = 1.586

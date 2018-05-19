@@ -26,6 +26,8 @@ class WalletViewController: BaseViewController {
         let transactionsTableView = UITableView(frame: .zero, style: .plain)
         transactionsTableView.translatesAutoresizingMaskIntoConstraints = false
         transactionsTableView.registerCell(TransactionTableViewCell.self)
+        transactionsTableView.tableFooterView = UIView()
+        transactionsTableView.rowHeight = UITableViewAutomaticDimension
         return transactionsTableView
     }()
 
@@ -57,6 +59,9 @@ class WalletViewController: BaseViewController {
         ])
 
         setupViewBindings()
+
+        //TODO: remove this
+        transactionsTableView.dataSource = self
     }
 
     private func setupViewBindings() {
@@ -86,5 +91,23 @@ class WalletViewController: BaseViewController {
                 self.coordinatorDelegate?.buttonCTapped(from: self)
             })
             .disposed(by: disposeBag)
+    }
+}
+
+//TODO: move this to a reactive style based on view model
+
+extension WalletViewController: UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TransactionTableViewCell.reuseIdentifier, for: indexPath) as? TransactionTableViewCell else { fatalError() }
+
+        let viewState = TransactionTableViewCell.ViewState(merchantName: "Tesco Tesco Tesco Tesco Tesco Tesco Tesco Tesco Tesco Tesco Tesco Tesco Tesco Tesco Tesco Tesco Tesco Tesco Tesco Tesco Tesco", categoryImage: nil, categoryName: "Groceries", price: NSAttributedString(string: "£9.99"))
+        cell.setViewState(viewState)
+
+        return cell
     }
 }
