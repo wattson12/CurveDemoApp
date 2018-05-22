@@ -26,7 +26,7 @@ extension Category {
     var icon: UIImage? {
         switch self {
         case .groceries:
-            return UIImage(asset: Asset.groceries)
+            return UIImage(asset: Asset.Test.groceries)
         default:
             return nil
         }

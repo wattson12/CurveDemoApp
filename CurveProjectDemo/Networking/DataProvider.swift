@@ -15,11 +15,13 @@ protocol DataProvider {
     func fetchResponse(fromURLRequest urlRequest: URLRequest) -> Observable<Data>
 }
 
+
+
 //URLSession is the easiest way, build on existing Rx extensions to add conformance
 extension URLSession: DataProvider {
 
-    func fetchResponse(fromURLRequest urlRequest: URLRequest) -> Observable<Data> {
+    func fetchResponse(fromURLRequest urlRequesturlRequesturlRequesturlRequ: URLRequest) -> Observable<Data> {
         return self.rx
-            .data(request: urlRequest)
+            .data(request: urlRequesturlRequesturlRequesturlRequ)
     }
 }
