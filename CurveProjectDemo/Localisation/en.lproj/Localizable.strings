@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  CurveProjectDemo
+
+  Created by Sam Watts on 19/05/2018.
+  Copyright © 2018 Sam Watts. All rights reserved.
+*/
+
+"category.display_name.groceries" = "Groceries";
+"category.display_name.general" = "General";
+"category.display_name.transport" = "Transport";

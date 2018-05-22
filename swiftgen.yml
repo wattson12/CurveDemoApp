@@ -1,0 +1,9 @@
+strings:
+  paths: CurveProjectDemo/Localisation/en.lproj/Localizable.strings
+  templateName: structured-swift4
+  output: CurveProjectDemo/Localisation/L10n.swift
+
+xcassets:
+  paths: CurveProjectDemo/Assets/Assets.xcassets
+  templateName: swift4
+  output: CurveProjectDemo/Assets/assets-images.swift

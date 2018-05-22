@@ -14,13 +14,21 @@ final class CardAndTransactionsViewModel {
 
     let disposeBag = DisposeBag()
 
-    let transactions: BehaviorRelay<[String]>
+    let transactions: BehaviorRelay<[Transaction]>
+    let dataProvider: DataProvider
 
-    init(transactions: [String] = []) {
+    init(transactions: [Transaction] = [], dataProvider: DataProvider = URLSession.shared) {
         self.transactions = BehaviorRelay(value: transactions)
+        self.dataProvider = dataProvider
     }
 
     func fetchTransactions() {
 
+        dataProvider
+            .fetchResponse(fromURLRequest: .fetchTransactions)
+            .convert(to: [Transaction].self)
+            .observeOn(MainScheduler.instance)
+            .bind(to: transactions)
+            .disposed(by: disposeBag)
     }
 }

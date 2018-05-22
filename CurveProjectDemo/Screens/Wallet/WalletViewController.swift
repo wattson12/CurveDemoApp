@@ -10,12 +10,40 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-extension Observable where Element: Collection, Element.Element == String {
+extension Category {
+
+    var displayName: String {
+        switch self {
+        case .general:
+            return L10n.Category.DisplayName.general
+        case .groceries:
+            return L10n.Category.DisplayName.groceries
+        case .transport:
+            return L10n.Category.DisplayName.transport
+        }
+    }
+
+    var icon: UIImage? {
+        switch self {
+        case .groceries:
+            return UIImage(asset: Asset.Test.groceries)
+        default:
+            return nil
+        }
+    }
+}
+
+extension Observable where Element: Collection, Element.Element == Transaction {
 
     func mapToTransactionViewState() -> Observable<[TransactionTableViewCell.ViewState]> {
         return self.map { elements in
             return elements.map {
-                TransactionTableViewCell.ViewState(merchantName: $0, categoryImage: nil, categoryName: "Groceries", price: NSAttributedString(string: "£9.99"))
+                TransactionTableViewCell.ViewState(
+                    merchantName: $0.merchantName,
+                    categoryImage: $0.category.icon,
+                    categoryName: $0.category.displayName,
+                    price: NSAttributedString(string: "\($0.currency)\($0.value)")
+                )
             }
         }
     }
@@ -111,5 +139,11 @@ class WalletViewController: BaseViewController {
                 cell.setViewState(viewState)
             }
             .disposed(by: disposeBag)
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        viewModel.fetchTransactions()
     }
 }

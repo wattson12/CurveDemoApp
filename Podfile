@@ -13,6 +13,9 @@ target 'CurveProjectDemo' do
   #linting is run via a run script build phase
   pod 'SwiftLint'
 
+  #Another non dependency exactly but integrating swift gen to be able to create localisable helpers
+  pod 'SwiftGen'
+
   target 'CurveProjectDemoTests' do
     inherit! :search_paths
   end
